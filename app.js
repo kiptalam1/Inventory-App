@@ -1,5 +1,6 @@
 const express = require("express");
 require("dotenv").config();
+const indexRouter = require("./routes/indexRoutes");
 const app = express();
 const PORT = process.env.PORT || 8000;
 
@@ -7,9 +8,9 @@ const PORT = process.env.PORT || 8000;
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
-	res.render("home");
-});
+app.use("/", indexRouter);
+
+
 
 app.listen(PORT, (req, res) => {
 	console.log(`listening at http://localhost:${PORT}`);
