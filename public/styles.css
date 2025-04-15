@@ -1,0 +1,122 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Inter", "Roboto", sans-serif;
+	font-size: 16px;
+}
+:root {
+	--primary-text: #1e293b;
+	--secondary: #64748b;
+	--headings: #0f172a;
+	--links: #3b82f6;
+	--alert: #ef4444;
+	--success: #22c55e;
+}
+body {
+	color: var(--primary-text);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+header {
+	padding: 20px;
+}
+.ph-wrench {
+	color: var(--headings);
+	font-size: 32px;
+	margin-right: 10px;
+}
+h1 {
+	color: var(--headings);
+	font-size: 32px;
+}
+
+header p {
+	color: var(--secondary);
+	padding: 5px 0;
+}
+.categories {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	flex-wrap: wrap;
+	margin: 0 20px;
+}
+.category {
+	background-color: var(--secondary);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 200px;
+	border-radius: 10px;
+	color: whitesmoke;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+}
+.category:hover {
+	background-color: var(--primary-text);
+}
+.category .ph-fill {
+	font-size: 60px;
+	/* color: var(--headings); */
+}
+span {
+	color: whitesmoke;
+	padding: 10px 0;
+}
+input {
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid var(--secondary);
+	outline: none;
+	color: var(--secondary);
+	width: 50%;
+	margin: 20px 0;
+}
+.info {
+	display: flex;
+	gap: 10px;
+	margin: 0 20px;
+
+}
+.info .category {
+	width: 150px;
+	height: 150px;
+}
+.info .category .ph-fill {
+    font-size: 48px;
+    color: var(--links);
+
+}
+.info .category .ph-warning {
+    color: var(--alert);
+}
+.databases{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px;
+    justify-content: center;
+
+}
+.databases div {
+    background-color: var(--secondary);
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    color: whitesmoke;
+
+}
+.databases div:hover {
+    background-color: var(--primary-text);
+
+}
