@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('partials/head') %>
+
+	<body>
+		<%- include('partials/header') %>
+		<h1><%= title%></h1>
+		<table border="1">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Price</th>
+					<th>Stock Quantity</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% suspensions.forEach(part => { %>
+				<tr>
+					<td><%= part.name %></td>
+					<td><%= part.price %></td>
+					<td><%= part.stock_qty %></td>
+					<td><%= part.description %></td>
+				</tr>
+				<% }) %>
+			</tbody>
+		</table>
+	</body>
+</html>

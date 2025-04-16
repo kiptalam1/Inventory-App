@@ -22,7 +22,11 @@ body {
 }
 header {
 	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
+
 .ph-wrench {
 	color: var(--headings);
 	font-size: 32px;
@@ -32,7 +36,11 @@ h1 {
 	color: var(--headings);
 	font-size: 32px;
 }
-
+nav {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+}
 header p {
 	color: var(--secondary);
 	padding: 5px 0;
@@ -44,6 +52,11 @@ header p {
 	gap: 10px;
 	flex-wrap: wrap;
 	margin: 0 20px;
+}
+.category-link {
+	text-decoration: none;
+	color: inherit;
+	display: inline-block;
 }
 .category {
 	background-color: var(--secondary);
@@ -75,48 +88,66 @@ input {
 	border: 1px solid var(--secondary);
 	outline: none;
 	color: var(--secondary);
-	width: 50%;
+	width: 70%;
 	margin: 20px 0;
 }
 .info {
 	display: flex;
 	gap: 10px;
 	margin: 0 20px;
-
 }
 .info .category {
 	width: 150px;
 	height: 150px;
 }
 .info .category .ph-fill {
-    font-size: 48px;
-    color: var(--links);
-
+	font-size: 48px;
+	color: var(--links);
 }
 .info .category .ph-warning {
-    color: var(--alert);
+	color: var(--alert);
 }
-.databases{
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin: 20px;
-    justify-content: center;
-
+.databases {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+	margin: 20px;
+	justify-content: center;
 }
 .databases div {
-    background-color: var(--secondary);
-    border-radius: 20px;
-    padding: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    width: 200px;
-    height: 40px;
-    text-align: center;
-    color: whitesmoke;
-
+	background-color: var(--secondary);
+	border-radius: 20px;
+	padding: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	width: 200px;
+	height: 40px;
+	text-align: center;
+	color: whitesmoke;
 }
 .databases div:hover {
-    background-color: var(--primary-text);
+	background-color: var(--primary-text);
+}
 
+/* brakes table styling */
+table {
+	width: 80%;
+	border-collapse: collapse;
+	margin-top: 2rem;
+	font-family: "Inter", sans-serif;
+}
+
+thead {
+	background-color: #f1f5f9;
+}
+
+th,
+td {
+	border: 1px solid #e2e8f0;
+	padding: 0.75rem;
+	text-align: left;
+}
+
+tbody tr:hover {
+	background-color: #f9fafb;
 }

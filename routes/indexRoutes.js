@@ -1,24 +1,17 @@
 const express = require("express");
+const indexController = require("../controllers/indexController");
 const router = express.Router();
 
 router.get("/", (req, res) => {
 	res.render("home");
 });
 
-router.get("/suspension", (req, res) => {
-	res.render("suspension");
-});
-router.get("/electrical-systems", (req, res) => {
-	res.render("systems");
-});
-router.get("/brakes", (req, res) => {
-	res.render("brakes");
-});
-router.get("/interior", (req, res) => {
-	res.render("interior");
-});
-router.get("/engine", (req, res) => {
-	res.render("engine");
-});
+router.get("/brakes", indexController.getBrakeParts);
+
+router.get("/suspension", indexController.getSuspensionParts);
+router.get("/electrical", indexController.getElectricalParts);
+
+router.get("/interior", indexController.getAccessories);
+router.get("/engine", indexController.getEngineParts);
 
 module.exports = router;

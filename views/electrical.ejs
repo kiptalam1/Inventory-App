@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('partials/head') %>
+	<body>
+		<%- include('partials/header') %>
+		<h1><%= title %></h1>
+
+		<table border="1">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Description</th>
+					<th>Price</th>
+					<th>Stock Quantity</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% electricalParts.forEach(part => { %>
+				<tr>
+					<td><%= part.name %></td>
+					<td><%= part.description %></td>
+					<td>$<%= part.price %></td>
+					<td><%= part.stock_qty %></td>
+				</tr>
+				<% }) %>
+			</tbody>
+		</table>
+	</body>
+</html>
