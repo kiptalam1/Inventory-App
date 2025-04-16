@@ -5,7 +5,6 @@
 	<body>
 		<%- include('partials/header') %>
 		<section class="categories">
-			
 			<a href="/suspension" class="category-link">
 				<div class="category">
 					<i class="ph-fill ph-gear"></i>
@@ -41,30 +40,33 @@
 				</div>
 			</a>
 		</section>
-		<input placeholder="Search for parts..." name="parts" />
+		<input class="searchbar" placeholder="Search for parts..." name="parts" />
 		<section class="info">
 			<div class="category">
 				<i class="ph-fill ph-puzzle-piece"></i>
-				<span>Total Parts: </span>
+				<span>Total Parts: <%= totalParts %></span>
 			</div>
 			<div class="category">
 				<i class="ph-fill ph-car"></i>
-				<span>Car Models: </span>
+				<span>Car Models: <%= totalCarModels %> </span>
 			</div>
 			<div class="category">
 				<i class="ph-fill ph-house-line"></i>
-				<span>Suppliers: </span>
+				<span>Suppliers: <%= totalSuppliers %></span>
 			</div>
 			<div class="category">
 				<i class="ph-fill ph-warning"></i>
-				<span>Low Stock Alerts: </span>
+				<span>Total Stock: <%= totalStock %> </span>
 			</div>
 		</section>
 		<section class="databases">
-			<div>View all parts</div>
-			<div>View Inventory logs</div>
-			<div>Add new Part</div>
-			<div>View Car Models</div>
+			<a href="/parts" class="category-link"> <div>View all parts</div></a>
+
+			<a href="/logs" class="category-link"> <div>View Inventory logs</div></a>
+
+			<a href="/addPart" class="category-link"> <div>Add new Part</div></a>
+
+			<a href="/carModels" class="category-link"><div>View Car Models</div></a>
 		</section>
 	</body>
 </html>

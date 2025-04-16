@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('partials/head') %>
+	<body>
+		<%- include('partials/header') %>
+		<h1><%= title %></h1>
+
+		<table border="1">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Part_ID</th>
+					<th>Change</th>
+					<th>Reason</th>
+					<th>Timestamp</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% logs.forEach(function(log) { %>
+				<tr>
+					<td><%= log.id %></td>
+					<td><%= log.part_id %></td>
+					<td><%= log.change %></td>
+					<td><%= log.reason %></td>
+					<td><%= log.time_stamp %></td>
+				</tr>
+				<% }); %>
+			</tbody>
+		</table>
+	</body>
+</html>
