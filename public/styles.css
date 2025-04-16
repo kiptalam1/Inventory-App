@@ -7,7 +7,7 @@
 }
 :root {
 	--primary-text: #1e293b;
-	--secondary: #64748b;
+	--secondary: #6d7787;
 	--headings: #0f172a;
 	--links: #3b82f6;
 	--alert: #ef4444;
@@ -36,8 +36,10 @@ header {
 }
 h1 {
 	color: var(--headings);
-	font-size: 32px;
+	font-size: 36px;
+	white-space: nowrap;
 }
+
 nav {
 	display: flex;
 	justify-content: space-between;
@@ -56,7 +58,6 @@ nav a {
 
 nav a:hover {
 	background-color: var(--primary-text);
-
 }
 
 header p {

@@ -10,8 +10,8 @@
 				<tr>
 					<th>ID</th>
 					<th>Part_ID</th>
-					<th>Change</th>
-					<th>Reason</th>
+					<th>Action</th>
+					<th>Quantity</th>
 					<th>Timestamp</th>
 				</tr>
 			</thead>
@@ -19,10 +19,11 @@
 				<% logs.forEach(function(log) { %>
 				<tr>
 					<td><%= log.id %></td>
+
 					<td><%= log.part_id %></td>
-					<td><%= log.change %></td>
-					<td><%= log.reason %></td>
-					<td><%= log.time_stamp %></td>
+					<td><%= log.action %></td>
+					<td><%= log.quantity %></td>
+					<td><%= log.log_time %></td>
 				</tr>
 				<% }); %>
 			</tbody>
